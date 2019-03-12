@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Records</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<table>
+    <th:block th:each="address : ${addresses}">
+        <tr>
+            <td th:text="${address.firstName}">...</td>
+            <td th:text="${address.lastName}">...</td>
+        </tr>
+        <tr>
+            <td colspan="2" th:text="${address.address}">...</td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
